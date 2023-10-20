@@ -1,13 +1,65 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
 body{
   background-color:#080404;
+  
 }
-
+body div{
+  
+  border: solid 1px white;
+}
+  .parentBox{
+   display: flex;
+    color: rgb(17, 1, 1);
+    background-color: rgb(180, 161, 136);
+    justify-content: space-between;
+   
+  }
 .wiseGuyCollection-Logo{
-    width: 100px;
+  width: 700px;
+  height: 400px;
+  margin-left: 20px;
    }
 
-  .logo{
-    border: solid 1px green;
-  }
-
+ .box1{
+  display: flex;
+  flex-direction: column;
+ }
+ .box2{
+  display: flex;
+ }
+.websiteStory {
+  display: flex;
+  margin-right: 20px;
+  background-color: aqua;
+  width: 500px;
+  height: 600px;
   
+}
+  .box3{
+   
+    color: white;
+    margin-left: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+
+  }
+  .box4{
+    
+    color: white;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+
+  }
+  .box5{
+    color: white;
+
+  }
+  .box6{
+    color: white;
+  }

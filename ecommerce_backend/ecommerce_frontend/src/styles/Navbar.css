@@ -1,17 +1,15 @@
 *{
     padding: 0;
     margin: 0;
-    border: solid 1px rgb(1, 100, 34);
+   
    
 }
 nav{
     background-color: rgb(68, 25, 20);
     height: 60px;
-}
-.headerParentBox{
-    border: solid 1px rgb(37, 134, 18);
     
 }
+
 /*because a Link converts to an anchor tag i'm using a to target every Link */
 a{
     text-decoration: none;
