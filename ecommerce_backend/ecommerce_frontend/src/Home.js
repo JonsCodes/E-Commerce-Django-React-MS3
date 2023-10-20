@@ -9,8 +9,9 @@ export default function Home () {
     <header>
       <a href="./" className="logo">Wise Guy Collections</a>
       <nav>
-      <Link to="/Login">Login</Link>
-      <Link to="/SignUp">SignUp</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/signUp">SignUp</Link>
+      <Link to='/shop'>Shop</Link>
       </nav>
     </header>
     <div className='entry'>
