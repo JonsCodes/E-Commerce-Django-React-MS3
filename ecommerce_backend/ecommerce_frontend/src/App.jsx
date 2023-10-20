@@ -5,7 +5,7 @@ import Home from './Home.jsx'
 import Login from './Login'
 import SignUp from './SignUp'
 import Shop from './Shop'
-
+import Checkout from './Checkout'
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
       <Route path="/" exact element={<Home/>}  ></Route>
       <Route path="/login" element={<Login/>}  ></Route>
       <Route path="/signUp" element={<SignUp/>}  ></Route>
-      <Route path='/shop' exact element={<Shop/>}></Route>
+      <Route path='/shop' element={<Shop/>}></Route>
+      <Route path='/checkout' element={<Checkout/>}></Route>
   </Routes> 
 </BrowserRouter>
  </div>    

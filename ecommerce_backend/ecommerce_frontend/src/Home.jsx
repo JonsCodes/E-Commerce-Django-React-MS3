@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import './styles/Home.css'
 
+
 const Home = () => {
   return (
     <main>
 
     <header>
-      
+        <Navbar />
     </header>
 
     <div className='entry'>
@@ -19,16 +20,7 @@ const Home = () => {
     
       
     
-    <div className="headerParentBox">
-
-      <div className="wiseGuyCollectionHeaderLogo">
-        <Link href="./" >Wise Guy Collections</Link>
-      </div>
-
-     <Navbar />
-
-    </div>
-
+    
     <div className="parentBox">
 
         <div >
