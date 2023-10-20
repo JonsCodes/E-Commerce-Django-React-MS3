@@ -2,11 +2,13 @@ import React from 'react'
 import Navbar from './components/Navbar'
 const SignUp = () => {
   return (
-    <><header>
+    <main>
+      <header>
       <Navbar />
     </header><div>
 
-      </div></>
+      </div>
+      </main>
   )
 }
 

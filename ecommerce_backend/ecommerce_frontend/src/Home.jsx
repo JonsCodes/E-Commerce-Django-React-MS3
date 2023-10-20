@@ -26,8 +26,11 @@ const Home = () => {
         <div >
             <img className="wiseGuyCollection-Logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" />
         </div>
+        <main></main>
+        <nav></nav>
+        <footer></footer>
         <div className="websiteStory">
-
+          <h1>Test</h1>
         </div>
         {/* boxes are going to be from left to right */}
         <div className="box3">
