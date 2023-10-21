@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+   
+   
+}
+nav{
+    background-color: rgb(68, 25, 20);
+    height: 60px;
+    
+}
+
+/*because a Link converts to an anchor tag i'm using a to target every Link */
+a{
+    text-decoration: none;
+    color: rgb(8, 4, 4);
+}
+
+.headerParentBox {
+    display: flex;
+    height: 60px;
+    justify-content:space-between;
+    
+   
+
+}
+.secondBox{
+    display: flex;
+   
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+
+}
+.secondBox a{
+    background-color: #b72213;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100px;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    
+}
+.secondBox a:hover{
+    background-color: #962014;
+}
+
+.wiseGuyCollectionHeaderLogo {
+    display: flex;
+    align-items: center;
+   margin-left: 20px;
+   color: rgb(8,4,4);
+   
+}
+
+.wiseGuyCollectionHeaderLogo a{
+    background-color: #b72213;
+    display: flex;
+    color: white;
+    height: 100%;
+    font-size: 20px;
+    align-items: center;
+}
+
+.wiseGuyCollectionHeaderLogo a:hover{
+    background-color: #962014;
+}
