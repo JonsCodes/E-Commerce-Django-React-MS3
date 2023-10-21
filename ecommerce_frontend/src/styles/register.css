@@ -1,0 +1,10 @@
+.auth-form-container, .login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label{
+    text-align: left;
+    padding: 0.25rem 0;
+  }

@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from './components/Navbar'
+import { useState } from "react"
+
 
 // Router
 export default function Home () {
+  
   return(
     <main>
-
+      
     <header>
         <Navbar />
     </header>
