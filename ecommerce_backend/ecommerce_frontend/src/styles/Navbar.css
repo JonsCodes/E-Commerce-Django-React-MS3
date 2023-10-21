@@ -10,18 +10,21 @@ nav{
     height: 60px;
     margin-left: 20px;
     margin-right: 20px;
+    
 }
 
 /*because a Link converts to an anchor tag i'm using a to target every Link */
 a{
     text-decoration: none;
     color: rgb(8, 4, 4);
+    
 }
 
 .headerParentBox {
     display: flex;
     height: 60px;
     justify-content:space-between;
+    
     
    
 
@@ -33,6 +36,10 @@ a{
     gap: 20px;
     margin-right: 0px;
 
+}
+ .secondBox .cart {
+    background-color: #201010;
+    color: #b72213;
 }
 .secondBox a{
     background-color: #b72213;
@@ -47,13 +54,14 @@ a{
 }
 .secondBox a:hover{
     background-color: #962014;
+    color: white;
 }
 
 .wiseGuyCollectionHeaderLogo {
     display: flex;
     align-items: center;
    margin-left: 0px;
-   color: rgb(8,4,4);
+   
    
 }
 

@@ -33,7 +33,7 @@ const Home = () => {
           </div>
 
           <div className="websiteStory">
-            <h1>Test</h1>
+            <h1>Website Story</h1>
           </div>
         </div>
         {/* boxes are going to be from left to right */}
