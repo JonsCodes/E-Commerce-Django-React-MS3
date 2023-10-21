@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 const checkout = () => {
   return (
-    <div>checkout</div>
+    <main>
+    <header>
+    <Navbar />
+  </header><div>
+
+    </div>
+    </main>
   )
 }
 
