@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from './components/Navbar'
 
 // Router
 export default function Home () {
@@ -7,16 +8,45 @@ export default function Home () {
     <main>
 
     <header>
-      <a href="./" className="logo">Wise Guy Collections</a>
-      <nav>
-      <Link to="/Login">Login</Link>
-      <Link to="/SignUp">SignUp</Link>
-      </nav>
+        <Navbar />
     </header>
-    <div className='entry'>
-      <h3></h3>
-      <p></p>
+<body>
+
+    
+    <div className="parentBox">
+
+        <div className='box1'>
+            <img className="wiseGuyCollection-Logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" />
+           <div className='box2'>
+           <div className="box3">
+                <h1>Test</h1>
+            </div>
+
+            <div className="box4">
+              <h1>Test</h1>
+            </div>
+           </div>
+        </div>
+        
+        <div className="websiteStory">
+          <h1>Test</h1>
+        </div> 
     </div>
+        {/* boxes are going to be from left to right */}
+       
+        
+        
+        <div className="box5">
+        <h1>Test</h1>
+        </div>
+        <div className="box6">
+        <h1>Test</h1>
+        </div>
+   
+    </body>
     </main>
-    )
+  )
 }
+
+
+   
