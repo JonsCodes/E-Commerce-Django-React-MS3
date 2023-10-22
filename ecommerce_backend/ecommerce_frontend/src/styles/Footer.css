@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+.containers{
+
+    max-width: 1000px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+
+.footerP{
+    background-color: rgb(45, 38, 37);
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4 {
+    font-size: 18px;
+    color: red;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    
+}
+.footer-col ul li a{
+    display: flex;
+    color: aliceblue;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+.footer-col ul li a:hover{
+    
+    padding-left: 20px;
+}

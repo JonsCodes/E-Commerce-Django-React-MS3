@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-
+import Footer from './components/Footer'
 const checkout = () => {
   return (
     <main>
@@ -9,6 +9,9 @@ const checkout = () => {
   </header><div>
 
     </div>
+    <footer>
+      <Footer/>
+    </footer>
     </main>
   )
 }

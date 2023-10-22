@@ -3,11 +3,19 @@
   margin: 0;
   
 }
-* body{
-  background-image: linear-gradient(to right,#080404, #0f0605, #962014, #b72213) 
-  
+ body{
+  /* background-image: linear-gradient(to right,#080404, #0f0605, #962014, #b72213) 
+   */
+   background-color: rgb(68, 25, 20);
+   border-radius: 15px;
 }
-
+.background div{
+  background-color: white;
+}
+.fightGear{
+  width: 310px;
+  height: 200px;
+}
   .parentBox{
    display: flex;
     color: rgb(17, 1, 1);
@@ -19,6 +27,7 @@
   width: 700px;
   height: 400px;
   margin-left: 20px;
+
    }
 
  .box1{
@@ -36,7 +45,7 @@
   margin-top: 20px;
   display: flex;
   margin-right: 20px;
-  background-color: aqua;
+  background-color: rgb(182, 116, 17);
   width: 500px;
   height: 620px;
   
@@ -65,3 +74,11 @@
   .box6{
     color: white;
   }
+ @media only screen and (min-width: 768px){
+  header{
+    display: block;
+    
+ 
+
+  }
+ }

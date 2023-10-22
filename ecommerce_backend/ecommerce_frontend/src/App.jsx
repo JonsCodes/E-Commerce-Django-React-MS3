@@ -7,6 +7,7 @@ import SignUp from './SignUp'
 import Shop from './Shop'
 import Cart from './Cart'
 
+
 function App() {
   return (
     <div className="App">

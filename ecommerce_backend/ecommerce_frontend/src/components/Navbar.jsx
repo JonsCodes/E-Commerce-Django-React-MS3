@@ -5,9 +5,10 @@ import '../styles/Navbar.css'
 const Navbar = () => {
   return (
     <nav className="hbox"> 
+      
         <div className="headerParentBox">
              <div className="wiseGuyCollectionHeaderLogo">
-                <Link to="/" >Wise Guy Collections</Link>
+                <Link to="/" ><img className="logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" /> Wise Guy Collections</Link>
             </div>
             <div className='secondBox'>
                 <Link className='login' to="/login">Login</Link>
