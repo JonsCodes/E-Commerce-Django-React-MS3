@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     # apps for different sections the website
-    'my_new_app'
+    'my_new_app',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #static folder for static files, images, css files, and javascript, etc.
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS =  [os.path.join(BASE_DIR, 'ecommerce_frontend/build/static')]
+STATICFILES_DIRS =  [os.path.join(BASE_DIR, 'ecommerce_frontend/Build/static')]
 
 
 # STATICFILES_DIRS =  [os.path.join(BASE_DIR, 'staticfiles')]
