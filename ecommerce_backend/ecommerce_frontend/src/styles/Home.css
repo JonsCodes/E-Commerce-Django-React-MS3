@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+* body{
+  background-image: linear-gradient(to right,#080404, #0f0605, #962014, #b72213) 
+  
+}
+
+  .parentBox{
+   display: flex;
+    color: rgb(17, 1, 1);
+  
+    justify-content: space-between;
+   
+  }
+.wiseGuyCollection-Logo{
+  width: 700px;
+  height: 400px;
+  margin-left: 20px;
+   }
+
+ .box1{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+ }
+ .box3Box4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+ }
+.websiteStory {
+  margin-top: 20px;
+  display: flex;
+  margin-right: 20px;
+  background-color: aqua;
+  width: 500px;
+  height: 620px;
+  
+}
+  .box3{
+   
+    color: white;
+    margin-left: 20px;
+    height: 200px;
+    width: 310px;
+    background-color: red;
+
+  }
+  .box4{
+    
+    color: white;
+    height: 200px;
+    width: 310px;
+    background-color: blue;
+
+  }
+  .box5{
+    color: white;
+
+  }
+  .box6{
+    color: white;
+  }
