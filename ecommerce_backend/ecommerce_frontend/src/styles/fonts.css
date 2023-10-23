@@ -1,0 +1,8 @@
+/* fonts.css */
+@font-face {
+  font-family: 'Mobster';
+  src: url('../fonts/Mobsters.ttf') format('truetype'); /* Specify the correct format */
+  font-weight: normal;
+  font-style: normal;
+}
+
