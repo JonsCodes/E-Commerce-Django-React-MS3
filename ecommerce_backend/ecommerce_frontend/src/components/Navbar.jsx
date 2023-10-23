@@ -8,7 +8,6 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
-import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/fonts.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -47,7 +46,7 @@ function NavbarBS() {
             variant='dark'
            size='large'
           >
-            <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+            <Dropdown.Item eventKey="1">Shops</Dropdown.Item>
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
             <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
             <Dropdown.Item eventKey="4">Action</Dropdown.Item>

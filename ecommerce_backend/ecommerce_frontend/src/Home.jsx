@@ -4,6 +4,8 @@ import NavbarBS from "./components/Navbar";
 import "./styles/Home.css";
 import Container from "react-bootstrap/esm/Container";
 import { Row, Col } from 'react-bootstrap';
+import '../src/styles/new_css/main.min.css';
+
 
 const Home = () => {
   return (

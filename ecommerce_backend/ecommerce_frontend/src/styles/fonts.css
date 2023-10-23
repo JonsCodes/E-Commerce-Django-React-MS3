@@ -6,3 +6,11 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'OldEnglish';
+  src: url('../fonts/OldeEnglish.ttf') format('truetype'); /* Specify the correct format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
