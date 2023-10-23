@@ -12,8 +12,8 @@ const Navbar = () => {
             <div className='secondBox'>
                 <Link className='login' to="/login">Login</Link>
                 <Link className='signUp' to="/signUp">SignUp</Link>
-                <Link className='shop' to='/shop'>Shop</Link>
-                <Link className='cart' to='/cart'>Cart</Link>
+                <Link className='shop' to='../pages/shop/shop'>Shop</Link>
+                <Link className='cart' to='../pages/shop/cart.jsx'>Cart</Link>
             </div>
 
            
@@ -25,3 +25,6 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// import { Cart } from './pages/cart/cart';
+// import { Shop } from './pages/shop/shop'; ecommerce_backend\ecommerce_frontend\src\pages\shop\shop.jsx
