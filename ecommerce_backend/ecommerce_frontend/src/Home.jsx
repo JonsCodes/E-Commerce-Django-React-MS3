@@ -6,46 +6,48 @@ import './styles/Home.css'
 
 const Home = () => {
   return (
-    
+
     <main>
 
-    <header>
+      <header>
         <Navbar />
-    </header>
-<body>
+      </header>
+      <body>
 
-    
-    <div className="parentBox">
 
-        <div className='box1'>
+        <div className="parentBox">
+
+          <div className='box1'>
             <img className="wiseGuyCollection-Logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" />
-           <div className='box2'>
-           <div className="box3">
-                <h1>Test</h1>
-            </div>
 
-            <div className="box4">
-              <h1>Test</h1>
+            <div className='box3Box4'>
+              
+              <div className="box3">
+                <h1>Box3</h1>
+              </div>
+
+              <div className="box4">
+                <h1>Box4</h1>
+              </div>
             </div>
-           </div>
+          </div>
+
+          <div className="websiteStory">
+            <h1>Website Story</h1>
+          </div>
         </div>
-        
-        <div className="websiteStory">
-          <h1>Test</h1>
-        </div> 
-    </div>
         {/* boxes are going to be from left to right */}
-       
-        
-        
+
+
+
         <div className="box5">
-        <h1>Test</h1>
+          <h1>Test</h1>
         </div>
         <div className="box6">
-        <h1>Test</h1>
+          <h1>Test</h1>
         </div>
-   
-    </body>
+
+      </body>
     </main>
   )
 }

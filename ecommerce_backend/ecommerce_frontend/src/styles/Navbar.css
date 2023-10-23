@@ -5,8 +5,11 @@
    
 }
 nav{
+    margin-top: 20px;
     background-color: rgb(68, 25, 20);
     height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
     
 }
 
@@ -14,12 +17,14 @@ nav{
 a{
     text-decoration: none;
     color: rgb(8, 4, 4);
+    
 }
 
 .headerParentBox {
     display: flex;
     height: 60px;
     justify-content:space-between;
+    
     
    
 
@@ -29,8 +34,12 @@ a{
    
     align-items: center;
     gap: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
 
+}
+ .secondBox .cart {
+    background-color: #201010;
+    color: #b72213;
 }
 .secondBox a{
     background-color: #b72213;
@@ -45,13 +54,14 @@ a{
 }
 .secondBox a:hover{
     background-color: #962014;
+    color: white;
 }
 
 .wiseGuyCollectionHeaderLogo {
     display: flex;
     align-items: center;
-   margin-left: 20px;
-   color: rgb(8,4,4);
+   margin-left: 0px;
+   
    
 }
 

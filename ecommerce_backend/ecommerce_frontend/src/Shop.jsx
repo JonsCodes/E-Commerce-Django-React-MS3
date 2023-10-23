@@ -9,7 +9,7 @@ const Shop = () => {
       <header>
       <Navbar />
     </header>
-    <div>shop</div>
+   
     </main>
   )
 }
