@@ -2,6 +2,8 @@ import React from "react";
 // import { Link } from 'react-router-dom'
 import NavbarBS from "./components/Navbar";
 import "./styles/Home.css";
+import Container from "react-bootstrap/esm/Container";
+import { Row, Col } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -38,13 +40,16 @@ const Home = () => {
           </div>
         </div>
         {/* boxes are going to be from left to right */}
-
-        <div className="box5">
+        <Container>
+      <Row className="child-box">
+        <Col xs={6} className="box5">
           <h1>Test</h1>
-        </div>
-        <div className="box6">
+        </Col>
+        <Col xs={6} className="box6">
           <h1>Test</h1>
-        </div>
+        </Col>
+      </Row>
+    </Container>
       </body>
     </main>
   );
