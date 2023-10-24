@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'api',
     'api.category',
     'api.product',
+    #'api.user',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,8 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+#AUTH_USER_MODEL = 'user.CustomUser'
 
 CORS_ALLOWED_ALLOW_ALL = True
 
