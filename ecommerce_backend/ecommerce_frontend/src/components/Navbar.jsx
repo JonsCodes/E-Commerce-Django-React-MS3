@@ -12,8 +12,8 @@ const Navbar = () => {
             <div className='secondBox'>
                 <Link className='login' to="/login">Login</Link>
                 <Link className='signUp' to="/signUp">SignUp</Link>
-                <Link className='shop' to='../pages/shop/shop'>Shop</Link>
-                <Link className='cart' to='../pages/shop/cart.jsx'>Cart</Link>
+                <Link className='shop' to='/shop'>Shop</Link>
+                <Link className='cart' to='/cart'>Cart</Link>
             </div>
 
            
