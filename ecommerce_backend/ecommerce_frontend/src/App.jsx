@@ -1,10 +1,12 @@
 import React from 'react'
+import './styles/App.css'
 import { Routes, Route, BrowserRouter, } from 'react-router-dom'
 import Home from './Home.jsx'
 import Login from './Login'
 import SignUp from './SignUp'
 import Shop from './Shop'
 import Cart from './Cart'
+
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/signUp" element={<SignUp/>}  ></Route>
       <Route path='/shop' element={<Shop/>}></Route>
       <Route path='/cart' element={<Cart/>}></Route>
+      <Route path='./shop' element={<Shop/>}></Route>
+      <Route path='./cart' element={<Cart/>}></Route>
   </Routes> 
 </BrowserRouter>
  </div>    
