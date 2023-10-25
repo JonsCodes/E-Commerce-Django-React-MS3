@@ -55,8 +55,6 @@ function NavbarBS() {
             <Dropdown.Divider />
             <Dropdown.Item eventKey="7">Action</Dropdown.Item>
             <Dropdown.Item eventKey="8">Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="9">Something else here</Dropdown.Item>
-            <Dropdown.Item eventKey="10">Action</Dropdown.Item>
             <Dropdown.Item eventKey="11">Another action</Dropdown.Item>
             <Dropdown.Item eventKey="12">Something else here</Dropdown.Item>
             <Dropdown.Divider />
