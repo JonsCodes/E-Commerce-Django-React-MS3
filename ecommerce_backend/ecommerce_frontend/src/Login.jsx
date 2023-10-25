@@ -4,16 +4,16 @@ import Footer from './components/Footer'
 const Login = () => {
   return (
 
-     <main>
-      <header>
-      <Navbar />
-    </header>
-    <div>
-    <footer>
-      <Footer/>
-    </footer>
-      </div>
-      </main>
+    <body>
+    <header>
+    <Navbar />
+  </header>
+  
+  <main>
+    
+ 
+  </main>
+  </body>
   )
 }
 

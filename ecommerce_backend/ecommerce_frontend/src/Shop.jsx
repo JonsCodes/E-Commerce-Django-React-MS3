@@ -5,14 +5,16 @@ import Footer from './components/Footer'
 
 const Shop = () => {
   return (
-    <main>
+    <body>
       <header>
       <Navbar />
     </header>
-   <footer>
-    <Footer/>
-   </footer>
+    
+    <main>
+      
+   
     </main>
+    </body>
   )
 }
 

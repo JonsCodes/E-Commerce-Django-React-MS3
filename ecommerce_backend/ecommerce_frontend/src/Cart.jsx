@@ -3,16 +3,16 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 const checkout = () => {
   return (
-    <main>
+    <body>
     <header>
     <Navbar />
-  </header><div>
-
-    </div>
-    <footer>
-      <Footer/>
-    </footer>
-    </main>
+  </header>
+  
+  <main>
+    
+ 
+  </main>
+  </body>
   )
 }
 

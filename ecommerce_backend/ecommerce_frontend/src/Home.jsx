@@ -8,53 +8,40 @@ import Footer from './components/Footer'
 const Home = () => {
   return (
 
-    <main>
+
+    <body>
+
 
       <header>
 
         <Navbar />
       </header>
-      <body>
 
-
-        <div className="parentBox">
-
-          <div className='box1'>
-            <img className="wiseGuyCollection-Logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" />
-
-            <div className='box3Box4'>
-
-              <div className="box3">
-                <Link to='/shop'>
-                  <img className="fightGear" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" /></Link>
-              </div>
-
-              <div className="box4">
-                <Link to='/shop'>
-                  <img className="fightGear" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" /></Link>
-              </div>
+      <main>
+        <div className="mainContainer">
+          <div className="mainLeft">
+            <h1 className="mainHeading">
+              Best Fighting <br />
+              Equipment
+            </h1>
+            <p className="mainContent">
+              Gear up with the best and conquer the ring! Wise Guy Colloections: Your Victory, Your Style, Your Choice. Elevate your performance, stay safe, and dominate your competition. Unleash Your Inner Warrior with Wise Guy Collections today!
+            </p>
+            <div className='button' >
+              <Link className='shopBtn' to='/shop'>Shop Now</Link>
             </div>
           </div>
 
-          <div className="websiteStory">
-            <h1>Website Story</h1>
+          <div className="mainRight">
+            <img src="/images/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyColletionLogo" className="wiseGuyLogo" />
           </div>
+
         </div>
-        {/* boxes are going to be from left to right */}
 
 
-        {/* this is going to be a gear slide show image */}
-        <div className="box5">
-          <h1>Test</h1>
-        </div>
-        <div className="box6">
-          <h1>Test</h1>
-        </div>
-        <footer>
-          <Footer />
-        </footer>
-      </body>
-    </main>
+      </main>
+    </body>
+
   )
 }
 
