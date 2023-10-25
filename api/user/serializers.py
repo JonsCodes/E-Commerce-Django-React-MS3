@@ -4,10 +4,6 @@ from rest_framework.decorators import authentication_classes, permission_classes
 from .models import CustomUser
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = CustomUser
-        fields = ('name', 'phone', 'email', 'password', 'gender', 'is_superuser', 'is_active', 'is_staff')
-        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         password = validated_data.pop('password', None)
@@ -23,7 +19,11 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             if attr == 'password':
                 instance.set_password(value)
             else:
-                setattr(instance, attr, value)
-                
+                setattr(instance, attr, value)       
         instance.save()
         return instance
+    
+    class Meta:
+        model = CustomUser
+        extra_kwargs = {'password': {'write_only': True}}
+        fields = ('name', 'phone', 'email', 'password', 'gender', 'is_superuser', 'is_active', 'is_staff')
