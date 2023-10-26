@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/header/Navbar';
 import '../Home/Home.css';
+import '../../components/footer/Footer.css';
+import '../../components/header/Navbar.css';
+
 
 const Home = () => {
   return (
@@ -26,7 +29,7 @@ const Home = () => {
           </div>
 
           <div className="mainRight">
-            <img src="/src/assets/logos/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollectionLogo" className="wiseGuyLogo" />
+            <img src="/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollectionLogo" className="wiseGuyLogo" />
           </div>
         </div>
       </main>

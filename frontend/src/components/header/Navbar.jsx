@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="navLeft">
             <div className="navLogo">
               <Link to={'/'}>
-                <img src="/images/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollection-Logo" />
+                <img src="/src/assets/logos/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollection-Logo" />
               </Link>
             </div>
 

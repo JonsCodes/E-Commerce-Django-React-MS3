@@ -4,7 +4,7 @@ import Home from '../src/pages/Home/Home';
 import Login from '../src/components/User-Login/Login';
 import SignUp from '../src/components/User-Registration/Registration';
 import { Shop } from '../src/pages/shop/shop';
-import {Cart }  from '../src/pages/cart/cart';
+import { Cart }  from '../src/pages/cart/cart';
 import Gloves from '../src/molecules/Gloves';
 import Handwraps from '../src/molecules/Handwraps';
 import Shoes from '../src/molecules/Shoes';
