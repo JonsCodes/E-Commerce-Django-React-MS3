@@ -2,6 +2,7 @@ import { faDiagramSuccessor } from "@fortawesome/free-solid-svg-icons"
 import { useState, useRef, useEffect, useContext } from "react"
 import AuthContext from './context/AuthProvider'
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 import axios from './api/axios'
@@ -103,7 +104,7 @@ const Login = () => {
             Need an Account?<br />
             <span className="line">
                 {/* Put router link here */}
-                <a href="#"></a>
+                <button><Link to='/Register'>Need an Account?</Link></button>
             </span>
         </p>
        </section>
