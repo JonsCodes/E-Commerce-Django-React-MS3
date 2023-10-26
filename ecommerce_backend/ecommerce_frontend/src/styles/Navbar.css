@@ -12,6 +12,13 @@ img{
 a{
     text-decoration: none;
 }
+.mobileMenuBtn {
+    display: none;
+    width: 20px;
+}
+.mobileMenu{
+    display: none;
+}
 nav{
     height: 90px;
     display: flex;
@@ -123,6 +130,53 @@ ul li:hover ul.dropdown{
 
 
 
+
+@media screen and (max-width:800px)
+{
+
+    .navContainer{
+        padding-inline: 16px;
+    }
+    .mobileMenuBtn{
+        display: block;
+        width: 60px;
+        margin-right: 20px;
+    }
+    .mobilemenu{
+        
+        cursor: pointer;
+        
+    }
+    .mobileMenu{
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        background-color: #141414;
+        padding: 80px 32px;
+        bottom: 0;
+    }
+    .mobileLinks{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: none;
+    }
+    .mobileLinks li{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        color: rgb(119, 118, 118);
+    }
+    .navLinks{
+        display: none;
+    }
+    .loginBtn,.registerBtn{
+        display: none;
+    }
+}
 
 
 

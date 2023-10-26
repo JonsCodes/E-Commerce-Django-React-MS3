@@ -6,7 +6,9 @@ import Login from './Login'
 import SignUp from './SignUp'
 import Shop from './Shop'
 import Cart from './Cart'
-
+import Gloves from './molecules/Gloves'
+import Handwraps from './molecules/Handwraps'
+import Shoes from './molecules/Shoes'
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
       <Route path="/signUp" element={<SignUp/>}  ></Route>
       <Route path='/shop' element={<Shop/>}></Route>
       <Route path='/cart' element={<Cart/>}></Route>
+      <Route path='/shop/gloves' element={<Gloves/>}></Route>
+      <Route path='/shop/handwraps' element={<Handwraps/>} ></Route>
+      <Route path='/shop/shoes' element={<Shoes/>} ></Route>
   </Routes> 
 </BrowserRouter>
  </div>    

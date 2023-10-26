@@ -7,51 +7,85 @@ import '../styles/Navbar.css'
 const Navbar = () => {
 
   return (
-
-
+   
     <nav>
-      <div className="navContainer">
-        <div className="navLeft">
-          <div className="navLogo">
-            <Link to={'/'}>
-              <img src="/images/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollection-Logo" />
-            </Link>
+        <div className="navContainer">
+          <div className="navLeft">
+            <div className="navLogo">
+              <Link to={'/'}>
+                <img src="/images/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollection-Logo" />
+              </Link>
+            </div>
+
+
+            <ul className="navLinks">
+              
+              <li><Link to={'/'}>Home</Link></li>
+
+              <li>
+                <Link className='navShop' to='/shop'>Shop</Link>
+                <ul className="dropdown">
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop'>Shop All</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop/gloves'>Gloves</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop/handwraps'>Hand Wraps</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop/shoes'>Shoes</Link>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <Link className='cart' to='/cart'>Cart</Link>
+              </li>
+
+            </ul>
           </div>
-
-
-          <ul className="navLinks">
-
-            <li><Link to={'/'}>Home</Link></li>
-
-            <li>
-              <Link className='navShop' to='/shop'>Shop</Link>
-              <ul className="dropdown">
-                <li className="subLinks">
-                  <Link className='shop' to='/shop'>Shop All</Link>
-                </li>
-                <li className="subLinks">
-                  <Link className='shop' to='/shop'>Gloves</Link>
-                </li>
-                <li className="subLinks">
-                  <Link className='shop' to='/shop'>Hand Wraps</Link>
-                </li>
-                <li className="subLinks">
-                  <Link className='shop' to='/shop'>Shoes</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link className='cart' to='/cart'>Cart</Link>
-            </li>
-
-          </ul>
+          <div className="navRightSide">
+            <Link className="loginBtn" to='/login'>Login</Link>
+            <Link className="registerBtn" to='/SignUp'>Sign Up</Link>
+          </div>
         </div>
-        <div className="navRightSide">
-          <Link className="loginBtn" to='/login'>Login</Link>
-          <Link className="registerBtn" to='/SignUp'>Sign Up</Link>
+
+        {/* mobile side */}
+        <div className="mobileMenuBtn">
+          <img src="images\Untitled.jpg" alt="Menu" />
         </div>
-      </div>
-    </nav>
+        <div className="mobileMenu">
+            <ul className="mobileLinks">
+              
+              <li><Link to={'/'}>Home</Link></li>
+
+              <li>
+                <Link className='navShop' to='/shop'>Shop</Link>
+                <ul className="dropdown">
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop'>Shop All</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop'>Gloves</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop'>Hand Wraps</Link>
+                  </li>
+                  <li className="subLinks">
+                    <Link className='shop' to='/shop'>Shoes</Link>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <Link className='cart' to='/cart'>Cart</Link>
+              </li>
+
+            </ul>
+            </div>
+      </nav>
+
+
 
 
   
