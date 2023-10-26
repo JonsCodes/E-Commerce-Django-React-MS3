@@ -1,9 +1,10 @@
 import { faDiagramSuccessor } from "@fortawesome/free-solid-svg-icons"
 import { useState, useRef, useEffect, useContext } from "react"
 import AuthContext from './context/AuthProvider'
+import React from 'react';
+
 
 import axios from './api/axios'
-import { parseJsonSourceFileConfigFileContent } from "typescript"
 const LOGIN_URL = '/auth'
 
 
@@ -19,7 +20,7 @@ const Login = () => {
     const [user, setUser] = useState('')
     const [pwd, setPwd] = useState('')
     const [errMsg, setErrMsg] = useState('')
-    cosnt [success, setSuccess] = useState(false)
+    const [success, setSuccess] = useState(false)
 
     useEffect(() => {
         userRef.current.focus()
@@ -30,7 +31,7 @@ const Login = () => {
     }, [user, pwd])
 
     const handleSubmit = async (e) => {
-        e.preventDefualt()
+        e.preventDefault()
         
         try{
             const response = await axios.post(LOGIN_URL,
