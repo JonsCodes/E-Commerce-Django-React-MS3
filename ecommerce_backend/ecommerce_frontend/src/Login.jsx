@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { Link } from 'react-router-dom'
+import SignUp from './SignUp'
 const Login = () => {
   return (
 
@@ -10,7 +12,7 @@ const Login = () => {
   </header>
   
   <main>
-    
+    <button><Link to='/signup'>signup</Link></button>
  
   </main>
   </body>
