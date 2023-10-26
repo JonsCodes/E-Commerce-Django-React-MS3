@@ -1,9 +1,10 @@
-import { useState, userRef, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import './styles/register.css'
 import axios from './api/axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 
@@ -12,7 +13,7 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/
 const REGISTER_URL = './api/axios'
 
 const Register = () => {
-    const useRef = useRef()
+    const userRef = useRef()
     const errRef = useRef()
 
     const [user, setUser] = useState('')
@@ -97,7 +98,7 @@ const Register = () => {
             <section>
                 <h1>Success!</h1>
                 <p>
-                    <a href="#">Sign In</a>
+                <button><Link to='/'>Sign In</Link></button>
                 </p>
             </section>
         ) : (
@@ -117,7 +118,7 @@ const Register = () => {
                 <input
                     type="text"
                     id="username"
-                    ref={useRef}
+                    ref={userRef}
                     autoComplete="off"
                     onChange={(e) => setUser(e.target.value)}
                     required
@@ -193,7 +194,7 @@ const Register = () => {
                 Already registered?<br />
                 <span className="line">
                      {/* Put router link here */}
-                    <a href="#">Sign in</a>
+                     <button><Link to='/login'>Already registered?</Link></button>
 
                 </span>
             </p>
