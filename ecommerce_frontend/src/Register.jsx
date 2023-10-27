@@ -191,7 +191,6 @@ const Register = () => {
                 </button>
             </form>
             <p>
-                Already registered?<br />
                 <span className="line">
                      {/* Put router link here */}
                      <button><Link to='/login'>Already registered?</Link></button>

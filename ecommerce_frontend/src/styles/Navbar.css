@@ -1,69 +1,182 @@
 *{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
    
-   
-}
-nav{
-    background-color: rgb(68, 25, 20);
-    height: 60px;
-    
 }
 
-/*because a Link converts to an anchor tag i'm using a to target every Link */
+img{
+    max-width: 100%;
+    
+}
 a{
     text-decoration: none;
-    color: rgb(8, 4, 4);
 }
-
-.headerParentBox {
-    display: flex;
-    height: 60px;
-    justify-content:space-between;
-    
-   
-
+.mobileMenuBtn {
+    display: none;
+    width: 20px;
 }
-.secondBox{
-    display: flex;
-   
-    align-items: center;
-    gap: 20px;
-    margin-right: 20px;
-
+.mobileMenu{
+    display: none;
 }
-.secondBox a{
-    background-color: #b72213;
+nav{
+    height: 90px;
     display: flex;
     align-items: center;
-    height: 100%;
-    width: 100px;
-    justify-content: center;
+    background-color: #141414;
     color: white;
-    font-size: 20px;
-    
 }
-.secondBox a:hover{
-    background-color: #962014;
-}
-
-.wiseGuyCollectionHeaderLogo {
+.navLeft{
     display: flex;
     align-items: center;
-   margin-left: 20px;
-   color: rgb(8,4,4);
+}
+.navLinks{
+    display: flex;
+    margin-left: 64px;
+    gap: 40px;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    
+}
+ul li a{
+    display: block;
+    padding: 20px 15px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+.dropdown{
+   display: flex;
+  
    
 }
 
-.wiseGuyCollectionHeaderLogo a{
-    background-color: #b72213;
-    display: flex;
-    color: white;
-    height: 100%;
-    font-size: 20px;
-    align-items: center;
+ul li ul.dropdown{
+    width: 200px;
+    background-color:#141414;
+    position: absolute;
+   
+    display: none;
+    
+}
+ul li a:hover{
+    background:rgb(119, 118, 118);
+    
+}
+ul li:hover ul.dropdown{
+    display: block;
+    margin-top: 320px;
+    
 }
 
-.wiseGuyCollectionHeaderLogo a:hover{
-    background-color: #962014;
+.navLinks li{
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    position: relative;
 }
+.navLinks li:hover{
+    color: rgb(119, 118, 118);
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-inline: 3rem;
+    color: white;
+}
+.navLogo{
+    width: 50px;
+    height: 50px;
+}
+
+
+.registerBtn,.loginBtn{
+    padding: 16px 32px;
+    border-radius: 15px;
+    color: rgb(119, 118, 118);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+}
+.registerBtn{
+    border: 1px solid rgb(119, 118, 118);
+    color: white;
+}
+.registerBtn:hover{
+    color: rgb(119, 118, 118);
+    
+}
+.loginBtn{
+    border:  none;
+    color: white;
+}
+.loginBtn:hover{
+    color: rgb(119, 118, 118);
+   
+}
+
+
+
+
+@media screen and (max-width:800px)
+{
+
+    .navContainer{
+        padding-inline: 16px;
+    }
+    .mobileMenuBtn{
+        display: block;
+        width: 60px;
+        margin-right: 20px;
+    }
+    .mobilemenu{
+        
+        cursor: pointer;
+        
+    }
+    .mobileMenu{
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        background-color: #141414;
+        padding: 80px 32px;
+        bottom: 0;
+    }
+    .mobileLinks{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        list-style: none;
+    }
+    .mobileLinks li{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        color: rgb(119, 118, 118);
+    }
+    .navLinks{
+        display: none;
+    }
+    .loginBtn,.registerBtn{
+        display: none;
+    }
+}
+
+
+

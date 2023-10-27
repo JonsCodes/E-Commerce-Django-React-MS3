@@ -101,7 +101,6 @@ const Login = () => {
                 <button>Sign In</button>
         </form>
         <p>
-            Need an Account?<br />
             <span className="line">
                 {/* Put router link here */}
                 <button><Link to='/Register'>Need an Account?</Link></button>

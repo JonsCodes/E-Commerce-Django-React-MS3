@@ -1,55 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { useState } from "react"
+import './styles/Home.css'
+import Footer from './components/Footer'
 
 
-// Router
-export default function Home () {
-  
-  return(
-    <main>
-      
-    <header>
+const Home = () => {
+  return (
+
+
+    <body>
+
+
+      <header>
+
         <Navbar />
-    </header>
-<body>
+      </header>
 
-    
-    <div className="parentBox">
-
-        <div className='box1'>
-            <img className="wiseGuyCollection-Logo" src="/images/WiseGuyCollections.jpg" alt="WiseGuyCollections Logo" />
-           <div className='box2'>
-           <div className="box3">
-                <h1>Test</h1>
+      <main>
+        <div className="mainContainer">
+          <div className="mainLeft">
+            <h1 className="mainHeading">
+              Best Fighting <br />
+              Equipment
+            </h1>
+            <p className="mainContent">
+              Gear up with the best and conquer the ring! Wise Guy Colloections: Your Victory, Your Style, Your Choice. Elevate your performance, stay safe, and dominate your competition. Unleash Your Inner Warrior with Wise Guy Collections today!
+            </p>
+            <div className='button' >
+              <Link className='shopBtn' to='/shop'>Shop Now</Link>
             </div>
+          </div>
 
-            <div className="box4">
-              <h1>Test</h1>
-            </div>
-           </div>
+          <div className="mainRight">
+            <img src="/images/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyColletionLogo" className="wiseGuyLogo" />
+          </div>
+
         </div>
-        
-        <div className="websiteStory">
-          <h1>Test</h1>
-        </div> 
-    </div>
-        {/* boxes are going to be from left to right */}
-       
-        
-        
-        <div className="box5">
-        <h1>Test</h1>
-        </div>
-        <div className="box6">
-        <h1>Test</h1>
-        </div>
-   
+
+
+      </main>
     </body>
-    </main>
+
   )
 }
 
-
-   
+export default Home
