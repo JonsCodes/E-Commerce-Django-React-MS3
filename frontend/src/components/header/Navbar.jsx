@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../header/Navbar'
+import '../header/Navbar.css';
 
 // made this into a component so we don't have to retype it for different urls
 
@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="navLeft">
             <div className="navLogo">
               <Link to={'/'}>
-                <img src="/src/assets/logos/FSFC-WiseGuy-Collections-Brand.jpg" alt="WiseGuyCollection-Logo" />
+                <img src="/WGChitmanLogo.jpg" alt="WiseGuy hitman Logo" />
               </Link>
             </div>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* mobile side */}
         <div className="mobileMenuBtn">
-          <img src="images\Untitled.jpg" alt="Menu" />
+          <img src="/WGChitmanLogo.jpg" alt="Menu" />
         </div>
         <div className="mobileMenu">
             <ul className="mobileLinks">
