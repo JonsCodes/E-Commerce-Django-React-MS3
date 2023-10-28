@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Mobsters';
+    src: url('../../public/fonts/Mobsters.ttf') format('truetype'); /* Specify the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'FortDeath-2';
+    src: url('../../public/fonts/FortDeath-2.ttf') format('truetype'); /* Specify the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RoyaleKingdom';
+    src: url('../../public/fonts/RoyaleKingdom.ttf') format('truetype'); /* Specify the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Team-Fury';
+    src: url('../../public/fonts/Team-Fury.ttf') format('truetype'); /* Specify the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'thealiens';
+    src: url('../../public/fonts/thealiens.ttf') format('truetype'); /* Specify the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }

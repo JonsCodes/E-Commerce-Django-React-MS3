@@ -1,12 +1,12 @@
 import React from "react";
-import "./About.css";
+import "./about.css";
 
 export const About = () => {
   return (
     <div>
       <main>
       <h1 className="about-heading">About</h1>
-      <img src="" alt="Wise Guy Collections Brothers-in-arms" />
+      <img src="https://cdn.discordapp.com/attachments/1164384358317182997/1167967991200239656/FormidableFivePhoto-About.jpg?ex=65500df4&is=653d98f4&hm=57e7f2b18c19e7de2944a7b3f4351c328f8f51bda2f7cb0838a76e1b862b915f&" alt="Wise Guy Collections Brothers-in-arms" />
         <section className="about-section">
           <div className="container">
             <h2 className="wise-guy-title">
