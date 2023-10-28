@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 import axios from '../../api/axios'
+import Navbar from "../header/Navbar";
 const LOGIN_URL = '/auth'
 
 
@@ -66,6 +67,7 @@ const Login = () => {
 
     return (
         <>
+        <header><Navbar /></header>
             {success ? (
                 <section>
                     <h1>You are logged in!</h1>
