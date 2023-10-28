@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, useContext } from "react"
 import AuthContext from './context/AuthProvider'
 import React from 'react';
 import { Link } from 'react-router-dom'
+import './Login.css'
 
 
 import axios from './api/axios'
@@ -33,12 +34,12 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        
-        try{
+
+        try {
             const response = await axios.post(LOGIN_URL,
-                JSON.stringify({user, pwd}),
+                JSON.stringify({ user, pwd }),
                 {
-                    headers: { 'Content-Type': 'application/json'},
+                    headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
                 }
             )
@@ -50,7 +51,7 @@ const Login = () => {
             setPwd('')
             setSuccess(true)
 
-        }catch (err){
+        } catch (err) {
             if (!err.response) {
                 setErrMsg("No Server Response")
             } else if (err.response?.status === 400) {
@@ -71,43 +72,44 @@ const Login = () => {
                     <h1>You are logged in!</h1>
                     <br />
                     <p>
-                        <a href="#">Go to Home</a>
+                        <a href="/">Go to Home</a>
                     </p>
                 </section>
             ) : (
-       <section>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username</label>
-            <input
-                type="text"
-                id="username"
-                ref={userRef}
-                autoComplete="off"
-                onChange={(e) => setUser(e.target.value)}
-                value={user}
-                required
-                />
+                <section className="section">
+                    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                    <form className="form" onSubmit={handleSubmit}>
+                    <h1 className="sign">Sign In</h1>
+                        <label className="user" htmlFor="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
+                            required
+                        />
 
-            <label htmlFor="password">Password</label>
-            <input
-                type="password"
-                id="password"
-                onChange={(e) => setPwd(e.target.value)}
-                value={pwd}
-                required
-                />
-                <button>Sign In</button>
-        </form>
-        <p>
-            <span className="line">
-                {/* Put router link here */}
-                <button><Link to='/Register'>Need an Account?</Link></button>
-            </span>
-        </p>
-       </section>
-       )}</>
+                        <label className="pwd" htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPwd(e.target.value)}
+                            value={pwd}
+                            required
+                        />
+                        <button className="signbtn">Sign In</button>
+
+                        <p>
+                            <span className="line">
+                                {/* Put router link here */}
+                                <button className="redbtn"><Link to='/Register'>Need an Account?</Link></button>
+                            </span>
+                        </p>
+                    </form>
+                </section>
+            )}</>
     )
 }
 export default Login

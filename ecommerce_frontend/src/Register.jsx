@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import './styles/register.css'
+import './styles/Register.css'
 import axios from './api/axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -98,15 +98,17 @@ const Register = () => {
             <section>
                 <h1>Success!</h1>
                 <p>
-                <button><Link to='/'>Sign In</Link></button>
+                <button><Link to='/'>Home</Link></button>
                 </p>
             </section>
         ) : (
-        <section>
+        <section className="section">
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-            <h1>SignUp</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">
+            
+            <form className="form" onSubmit={handleSubmit}>
+            <h1 className="sign">SignUp</h1>
+                <label className="user" htmlFor="username">
+                
                     Username:
                     {/* <span className={validName ? "valid" : "hide"}>
                         <FontAwesomeIcon icon={faCheck} />
@@ -134,7 +136,7 @@ const Register = () => {
                     Letters, numbers, underscores, hyphens are allowed.
                 </p>
                 
-                <label htmlFor="password">
+                <label className="pwd" htmlFor="password">
                     Password:
                     <span className={validName ? "valid" : "hide"}>
                         {/* <FontAwesomeIcon icon={faCheck} /> */}
@@ -162,7 +164,7 @@ const Register = () => {
                     <span aria-label="percent">%</span>
                 </p>
 
-                <label htmlFor="confirm_pwd">
+                <label className="com" htmlFor="confirm_pwd">
                     Confirm Password:
                     <span className={validMatch && matchPwd ? "valid" : "hide"}>
                         {/* <FontAwesomeIcon icon={faCheck} /> */}
@@ -186,17 +188,18 @@ const Register = () => {
                     Must match the first password inpit field.
                 </p>
 
-                <button disabled={!validName || !validPwd || !validMatch ? true : false}>
+                <button className="matchbtn" disabled={!validName || !validPwd || !validMatch ? true : false}>
                     Sign Up
                 </button>
-            </form>
-            <p>
+
+                <p>
                 <span className="line">
                      {/* Put router link here */}
-                     <button><Link to='/login'>Already registered?</Link></button>
+                     <button className="redbtn"><Link to='/login'>Already registered?</Link></button>
 
                 </span>
             </p>
+            </form>
        </section>
        )}
        </>

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: rgba(187,187,245);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 350px;
+    height: 550px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    border-radius: 10px;
+}
+
+#username, #password, #confirm_pwd {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 5px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
+
+.signbtn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+} 
+
+ .redbtn, .matchbtn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+} 
+
+.user, .pwd{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sign {
+    text-align: center;
+}
+
