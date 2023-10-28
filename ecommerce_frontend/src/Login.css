@@ -16,7 +16,7 @@
 
 .form {
     width: 350px;
-    height: 550px;
+    height: 580px;
     box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
     border-radius: 10px;
 }
@@ -65,7 +65,7 @@
     cursor: pointer;
 } 
 
-.user, .pwd{
+.user, .pwd, .com{
     font-weight: normal;
     font-size: 24px;
     text-align: center;
