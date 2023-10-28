@@ -1,6 +1,7 @@
 from django.db import migrations, models
 from api.user.models import CustomUser
 
+
 class Migration(migrations.Migration):
 
     dependencies = []
