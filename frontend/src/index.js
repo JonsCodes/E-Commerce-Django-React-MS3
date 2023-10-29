@@ -4,7 +4,7 @@ import '../src/Styles/index.css';
 import App from './App';
 import reportWebVitals from '../src/contexts/reportWebVitals';
 import { AuthProvider } from '../src/contexts/AuthProvider';
-import '../src/Styles/index.css';
+
 
 const Root = () => (
   <React.StrictMode>

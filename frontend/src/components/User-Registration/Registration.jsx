@@ -1,10 +1,8 @@
 import { useState, useRef, useEffect } from "react"
 import '../User-Registration/Registration.css'
 import axios from '../../api/axios'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
-import Navbar from "../header/Navbar";
+
 
 
 
@@ -94,7 +92,7 @@ const Register = () => {
 
     return (
         <>
-        <header><Navbar /></header>
+        <container className="RegistrationContainer">
         {success ? (
             <section>
                 <h1>Success!</h1>
@@ -201,6 +199,7 @@ const Register = () => {
             </p>
        </section>
        )}
+       </container>
        </>
     )
 }

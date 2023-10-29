@@ -9,6 +9,7 @@ img{
     max-width: 100%;
     
 }
+
 a{
     text-decoration: none;
 }
@@ -53,27 +54,23 @@ ul li ul.dropdown li{
 }
 .dropdown{
    display: flex;
-  
-   
+   width: 200px;
+   background-color:#6b0821;
+   position: absolute;
+   display: none;  
 }
 
-ul li ul.dropdown{
-    width: 200px;
-    background-color:#000000;
-    position: absolute;
-   
-    display: none;
-    
+ul a:not(.store):hover{
+    color: #6b0821;
+    font-weight: 750;
 }
-ul li a:hover{
-    background:rgb(119, 118, 118);
-    
-}
-ul li:hover ul.dropdown{
+
+ul :hover ul.dropdown{
     display: block;
     margin-top: 320px;
     
 }
+
 
 .navLinks li{
     cursor: pointer;
@@ -85,20 +82,22 @@ ul li:hover ul.dropdown{
     position: relative;
 }
 .navLinks li:hover{
-    color: rgb(119, 118, 118);
+    color: rgba(255, 255, 255, 0);
 }
 .navContainer{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
-    max-width: 1440px;
+    max-width: auto;
     margin: 0 auto;
     padding-inline: 3rem;
     color: white;
+    border-bottom: solid #ffffff .5px;
+    padding-bottom: 10px;
 }
 .navLogo{
-    width: 70px;
+    width: 72px;
     height: 70px;
 }
 
@@ -177,7 +176,3 @@ ul li:hover ul.dropdown{
         display: none;
     }
 }
-
-
-
-

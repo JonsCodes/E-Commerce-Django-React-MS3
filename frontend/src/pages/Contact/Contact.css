@@ -1,0 +1,109 @@
+
+
+
+
+hr{
+  height: 6px;
+  background-color: #69061c;
+  border-radius: 35%;
+  margin: 0 auto; 
+  width: 30vw;
+}
+h2{
+  display: block;
+}
+/* Style the contact section */
+
+.contact-section {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 5px solid #69061c;
+  border-radius: 5px;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  margin-left:50%;
+  margin-top: 10vh;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-family: "Team-Fury";
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+/* Style the form */
+form {
+  margin-top: 20px;
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+  
+}
+
+label {
+
+  font-size: 25px;
+  color: rgb(75, 75, 75);
+  font-family: "FortDeath-2";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="message"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #636363a5;
+  font-size: medium;
+}
+
+.SubBtn {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #000000;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  height: 50px;
+  margin:0 auto;
+}
+
+.SubBtn:hover {
+    background-color: white;
+  border: 3.5px solid #69061c;
+  color: #69061c;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+
+
+/* 
+Media query for responsiveness
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 15px;
+  }
+} */

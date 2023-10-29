@@ -2,12 +2,11 @@
 import { useState, useRef, useEffect, useContext } from "react"
 import AuthContext from '../../contexts/AuthProvider'
 import React from 'react';
+import './login.css'
 import { Link } from 'react-router-dom'
-
-
 import axios from '../../api/axios'
-import Navbar from "../header/Navbar";
 const LOGIN_URL = '/auth'
+
 
 
 
@@ -67,7 +66,7 @@ const Login = () => {
 
     return (
         <>
-        <header><Navbar /></header>
+        <div className="LoginContainer">
             {success ? (
                 <section>
                     <h1>You are logged in!</h1>
@@ -110,7 +109,10 @@ const Login = () => {
             </span>
         </p>
        </section>
-       )}</>
+       
+       )}
+       </div>
+       </>
     )
 }
 export default Login

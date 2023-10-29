@@ -1,27 +1,60 @@
+
+main { 
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  align-items: center;
+  justify-content: center;
+}
+
 .about-section {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px;
+  background-color: #ffffff;
+  padding: 30px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  margin-right: 25px;
+  margin-top: 27.5px;
   text-align: center;
+  width: auto;
+  /* float:right; */
+}
+
+  hr{
+    width: 200px;
+    height: 6px;
+    background-color: #69061c;
+    border-radius: 20%;
+    margin-bottom: 10px;
+  }
+
+.img-section {
+  width: auto;
+  height: 100vh;
 }
 
 .about-heading {
-  font-size: 36px;
+  font-family: "Team-Fury";
+  font-size: 32px;
   margin: 20px 0;
 }
 
 .wise-guy-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
-  color: #ff6600;
-  margin: 20px 0;
+  color: #000000;
+  margin: 20px;
 }
 
-.about-paragraph {
-  font-size: 18px;
-  line-height: 1.5;
+p {
+  font-family: "FortDeath-2";
+  font-size: 22px;
+  line-height: 1.2;
   margin: 20px 0;
+  color: rgb(75, 75, 75);
+}
+
+i{
+  font-family: "mobsters";
+  font-weight: 100;
 }
 
 .quote {

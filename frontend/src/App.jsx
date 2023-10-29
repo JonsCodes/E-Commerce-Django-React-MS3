@@ -4,18 +4,22 @@ import Home from '../src/pages/Home/Home';
 import Login from '../src/components/User-Login/Login';
 import SignUp from '../src/components/User-Registration/Registration';
 import { Shop } from '../src/pages/shop/shop';
-import { Cart }  from '../src/pages/cart/cart';
+import { Cart } from '../src/pages/cart/cart';
 import Gloves from '../src/molecules/Gloves';
 import Handwraps from '../src/molecules/Handwraps';
 import Shoes from '../src/molecules/Shoes';
 import '../src/Styles/index.css';
 import About from '../src/pages/About/About';
 import Contact from './pages/Contact/Contact';
+import Navbar from './components/header/Navbar';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <main>
+          <Navbar />
+        </main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
