@@ -23,6 +23,8 @@ const Navbar = () => {
               <li><Link to={'/'}>Home</Link></li>
               <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/contact'}>Contact</Link></li>
+            <li><Link className="shopBtn" to='/shop'>Shop</Link></li>
+            <li><Link className="cartBtn" to='/cart-page'>Cart</Link></li>
 
               {/* <li>
                 <Link className='navShop' to='/shop'>Shop</Link>
@@ -50,6 +52,7 @@ const Navbar = () => {
           <div className="navRightSide">
             <Link className="loginBtn" to='/login'>Login</Link>
             <Link className="registerBtn" to='/SignUp'>Sign Up</Link>
+            {/* <Link className="cartBtn" to='/cart'>Cart</Link> */}
           </div>
         </div>
 

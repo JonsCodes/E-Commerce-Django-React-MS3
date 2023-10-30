@@ -14,6 +14,7 @@ import Contact from './pages/Contact/Contact';
 import Navbar from './components/header/Navbar';
 import Shop from './pages/Shops-selection-pages/Stops-selection-page';
 import Cart from '../src/pages/Shops-selection-pages/cart';
+import CartPage from './pages/Shops-selection-pages/cart-page';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/cartPage" element={<CartPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

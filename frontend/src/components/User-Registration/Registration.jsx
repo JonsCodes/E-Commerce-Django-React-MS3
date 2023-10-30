@@ -32,13 +32,13 @@ class SignUpPage extends Component {
     const data = { username, email, password };
 
     try {
-      const response = await fetch('http://localhost:8000/api/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch('/signup', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
 
       if (response.status === 201) {
         // Registration successful, you can redirect the user or show a success message.
