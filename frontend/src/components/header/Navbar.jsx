@@ -24,7 +24,7 @@ const Navbar = () => {
               <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/contact'}>Contact</Link></li>
 
-              <li>
+              {/* <li>
                 <Link className='navShop' to='/shop'>Shop</Link>
                 <ul className="dropdown">
                   <li className="subLinks">
@@ -43,7 +43,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link className='cart' to='/cart'>Cart</Link>
-              </li>
+              </li> */}
 
             </ul>
           </div>

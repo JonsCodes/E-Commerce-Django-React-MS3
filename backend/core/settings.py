@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-4bk%4gxt+a)2g*p5^o(__zgr&kuf9%_4f4_(4pyfvcsu)3dcel
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.178']
 
 # Application definition
 
@@ -136,7 +136,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = 'user.CustomUser'
 
-CORS_ALLOWED_ALLOW_ALL = True
+CORS_ALLOWED_ALLOW_ALL = CORS_ALLOW_ALL_ORIGINS = True
+
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
