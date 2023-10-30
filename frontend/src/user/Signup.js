@@ -57,7 +57,7 @@ const Signup = () => {
               to="/signin"
             >
               login now.
-            </Link>
+            </Link> 
           </div>
         </div>
       </div>
