@@ -11,13 +11,9 @@ const Base = ({
     <div className="bg-black text-white">
       <Menu />
       <div className="container-fluid">
-        <div className="jumbotron bg-dark text-white text-center">
-          <h2 className="display-4">{title}</h2>
-          <p className="lead">{description}</p>
-        </div>
         <div className={className}>{children}</div>
       </div>
-      <footer className="footer bg-black mt-auto py-3">
+      {/* <footer className="footer bg-black mt-auto py-3">
         <div className="container-fluid bg-black text-white text-center py-3">
           <h4>If you got any questions, reach us at support@wiseguyscollections.com</h4>
           <button className="btn btn-dark btn-lg">Contact Us</button>
@@ -27,7 +23,7 @@ const Base = ({
             </span>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
