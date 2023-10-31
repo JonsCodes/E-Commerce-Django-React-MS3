@@ -27,8 +27,8 @@ export default function Home() {
   }, []);
 
   return (
-    <Base title="Home Page" description="Welcome to Wise Guy Colletions">
-      <h1>Home component</h1>
+    <Base title="Shop Page" description="Welcome to Wise Guy Colletions Shop">
+      <h1>Shop component</h1>
       <div className="row">
         {products.map((product, index) => {
           return (
