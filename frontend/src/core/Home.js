@@ -28,8 +28,8 @@ export default function Home() {
 
   return (
     <Base title="Shop Page" description="Welcome to Wise Guy Colletions Shop">
-      <h1>Shop component</h1>
-      <div className="row">
+      <h1>Wise Guy Shop</h1>
+      <div className="shop">
         {products.map((product, index) => {
           return (
             <div key={index} className="col-4 mb-4">

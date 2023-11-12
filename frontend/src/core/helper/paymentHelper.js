@@ -5,9 +5,12 @@ export const getmeToken = (userId, token) => {
     method: "GET",
   })
     .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       return response.json();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.error("Error in getmeToken:", err));
 };
 
 export const processPayment = (userId, token, paymentInfo) => {
@@ -22,8 +25,11 @@ export const processPayment = (userId, token, paymentInfo) => {
     body: formData,
   })
     .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       console.log("p-0", response);
       return response.json();
-    });
-  //.catch((err) => console.log(err));
+    })
+    .catch((err) => console.error("Error in processPayment:", err));
 };
