@@ -125,26 +125,23 @@ const PaymentB = ({
 
   const showbtnDropIn = () => {
     return (
-      <div>
+      <div className="dropin-container">
         {info.clientToken !== null && products.length > 0 ? (
-          <div>
+          <div className="dropin">
             <DropIn
               options={{ authorization: info.clientToken }}
               onInstance={(instance) => (info.instance = instance)}
             />
-            <button
-              onClick={onPurchase}
-              className="btn btn-block btn-success"
-            >
+            <button onClick={onPurchase} className="Buybtn">
               Buy Now
             </button>
           </div>
         ) : (
-          <h3></h3>
+          <h3>Please login or add something to the cart</h3>
         )}
       </div>
     );
-  };
+  }; 
 
   return (
     <div className="cart-total">

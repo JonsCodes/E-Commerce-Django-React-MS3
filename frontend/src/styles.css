@@ -159,10 +159,19 @@ color: #69061c;
 }
 
 .cart-total {
+  text-align: center;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
   z-index: 1000;
+  width: 350px;
+  height: 150px;
+  padding: 25px;
+  border: #69061c solid 3px;
+  background-color: #ffffff;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 20px 0 0 0;
 }
 
 
@@ -264,6 +273,11 @@ color: #69061c;
   border-radius: 5%;
 }
 
+
+
+
+
+
 /* ************************SignUp Page and SignIn Page************************ */
 
 .Signin-container{
@@ -337,7 +351,6 @@ h2{
 border: 3.5px solid #69061c;
 color: #69061c;
 }
-
 
 
 
