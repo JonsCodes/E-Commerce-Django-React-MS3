@@ -96,13 +96,12 @@ const Signin = () => {
   const signInForm = () => {
     return (
       <div className="Signin-container">
-        <div className="sign-in-center">
-          {loadingMessage()}
-          {successMessage()}
-          {errorMessage()}
+        <div className="sign-in-box">
+        <h2>Welcome Back Gangsta!!!</h2>
           <form>
-            <div className="form-group">
-              <label className="text-light">Email</label>
+            <div className="Email">
+              <label className="Label">Email</label>
+              <br/>
               <input
                 name="email"
                 className="form-control"
@@ -111,8 +110,9 @@ const Signin = () => {
                 type="text"
               />
             </div>
-            <div className="form-group">
-              <label className="text-light">password</label>
+            <div className="password">
+              <label className="Label">password</label>
+              <br/>
               <input
                 name="password"
                 className="form-control"
@@ -133,7 +133,7 @@ const Signin = () => {
   return (
     <Base title="Welcome to sign in page" description="Wise Guy Collections">
       {signInForm()}
-      {/* {loadingMessage()} */}
+      {loadingMessage()}
       {successMessage()}
       {performRedirect()}
     </Base>

@@ -17,11 +17,6 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .containers{
-  max-width: 1000px;
-  margin: auto;
-} */
-
 /* ********************home page ********************/
 
 .Hitmanlogo{
@@ -73,26 +68,27 @@ max-width: 1100px;
 /* shop button on home page */
 .HSbtn{
   margin-top: 50px;
-  /* display: flex;
-  justify-content: space-evenly; */
+  font-family: 'Mobsters';
+  font-size: 50px;
+  display: flex;
+  justify-content: space-evenly; 
 }
 
-.homeBtn{
+a.homeBtn{
   text-decoration: none;
   background-color: black;
   width: fit-content;
-  padding: 15px;
+  padding: 13px;
   color: white;
   border-radius: 10px;
   cursor: pointer;
-
+  width: 200px; height:80px;
 }
 
 .homeBtn:hover {
   background-color: white;
 border: 3.5px solid #69061c;
 color: #69061c;
-font-size: 15px;
 }
 
 
@@ -127,34 +123,8 @@ ul li a{
 }
 
 
-/* .registerBtn,.loginBtn{
-  padding: 16px 32px;
-  border-radius: 15px;
-  color: rgb(119, 118, 118);
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 18px;
-} */
 
-/* .registerBtn{
-  border: 1px solid rgb(119, 118, 118);
-  color: white;
-} */
-
-/* .registerBtn:hover{
-  color: rgb(119, 118, 118);
-} */
-
-/* .loginBtn{
-  border:  none;
-  color: white;
-}
-
-.loginBtn:hover{
-  color: rgb(119, 118, 118);
-} */
-
-/* *************************cart page************************* */
+/* *************************Cart page************************* */
 
 .cart-item{
   display: grid;
@@ -164,6 +134,89 @@ ul li a{
   margin-right: 20px;
   align-items: center;
 }
+
+.LoginBtn{
+  text-decoration: none;
+  background-color: black;
+  width: fit-content;
+  padding: 13px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px; height:80px;
+}
+.LoginBtn:hover{
+  background-color: white;
+border: 3.5px solid #69061c;
+color: #69061c;
+}
+
+.cartpage-message{
+  margin-top: 15vh;
+  font-size: 50px;
+  font-family: 'TeamFury';
+  text-align: center;
+}
+
+.cart-total {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+
+/* *********************** cart message *********************** */
+.added-to-cart-message
+{
+  position: fixed;
+  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  right: 10px; /* Adjust the distance from the right as needed */
+  background-color: #3ad83f; /* Background color */
+  color: white; /* Text color */
+  padding: 10px; /* Padding around the text */
+  border-radius: 5px; /* Border radius for rounded corners */
+  display: none; /* Initially hide the message */
+}
+
+.added-to-cart-message.show 
+{
+  display: block; /* Display the message when the 'show' class is present */
+  animation: fadeInOut 3s ease-in-out; /* Add a fade-in and fade-out animation */
+}
+
+.removed-from-cart-message {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #d9534f; /* Red color, you can change this to your preferred color */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.removed-from-cart-message.show {
+  display: block;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+
+
+
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+
+
 
 
 /* ***********************SHOP PAGE*********************** */
@@ -182,6 +235,7 @@ ul li a{
   font-weight: 900;
   font-family: 'TeamFury'
 }
+
 
 
 /******************************** CARD ITEM**************************/
@@ -210,32 +264,84 @@ ul li a{
   border-radius: 5%;
 }
 
-.cartpage-message{
-  margin-top: 15vh;
-  font-size: 50px;
-  font-family: 'TeamFury';
-  text-align: center;
+/* ************************SignUp Page and SignIn Page************************ */
+
+.Signin-container{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 70vh;
 }
 
-.LoginBtn{
+.SignUp-container{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 90vh;
+}
+
+.sign-up-box{
+  text-align: center;
+  padding: 20px;
+  border: 5px solid #000000;
+  border-Radius: 8px;
+  box-Shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  background-Color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  width: 50%;
+  height: 50%;
+ }
+
+ .sign-in-box{
+  text-align: center;
+  padding: 20px;
+  border: 5px solid #000000;
+  border-Radius: 8px;
+  box-Shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  background-Color: #ffffff;
+  box-shadow: 0 0 100px rgba(255, 0, 0, 0.2);
+  width: 50%;
+  height: 50%;
+ }
+
+h2{
+  font-family: "Mobsters";
+  font-size: 50px;
+  font-weight: 100;
+  margin-bottom: 35px;
+}
+
+.Label{
+  font-family: "Mobsters";
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.success-btn{
+  font-family: "Mobsters";
+  font-size: 50px;
+  margin-top: 25px;
   text-decoration: none;
   background-color: black;
   width: fit-content;
-  padding: 15px;
+  padding: 13px;
   color: white;
   border-radius: 10px;
   cursor: pointer;
-
+  width: 200px; height:80px;
 }
 
-.LoginBtn:hover {
+.success-btn:hover {
   background-color: white;
 border: 3.5px solid #69061c;
 color: #69061c;
 }
 
 
-/* FONTS */
+
+
+/**************** FONTS ******************/
 
 
 @font-face {

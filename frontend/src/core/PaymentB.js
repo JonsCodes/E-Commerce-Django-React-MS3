@@ -140,14 +140,14 @@ const PaymentB = ({
             </button>
           </div>
         ) : (
-          <h3>Please login first or add something in the cart</h3>
+          <h3></h3>
         )}
       </div>
     );
   };
 
   return (
-    <div>
+    <div className="cart-total">
       <h3>Your bill is $ {getAmount()}</h3>
       {showbtnDropIn()}
     </div>

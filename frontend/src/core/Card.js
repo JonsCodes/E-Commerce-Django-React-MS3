@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ImageHelper from "./helper/ImageHelper";
-import { Redirect } from "react-router-dom";
 import { addItemToCart, removeItemFromCart } from "./helper/cartHelper";
 import { isAuthenticated } from "../auth/helper";
 
@@ -10,9 +9,10 @@ const Card = ({
   removeFromCart = false,
   reload = undefined,
   setReload = (f) => f,
-  // function(f){return f}
 }) => {
   const [redirect, setRedirect] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+  
 
   const cartTitle = product ? product.name : "Product Name";
   const cartDescription = product ? product.description : "Product Description";
@@ -21,67 +21,76 @@ const Card = ({
   const addToCart = () => {
     if (isAuthenticated()) {
       addItemToCart(product, () => setRedirect(true));
+      setShowMessage(true); // Set the state to true when the item is added to the cart
+      
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 3000);
+
+
       console.log("Added to cart");
     } else {
       console.log("Login Please!");
     }
   };
-
-  const getAredirect = (redirect) => {
-    if (redirect) {
-      return <Redirect to="/cart" />;
-    }
-  };
-
   const showAddToCart = (addToCart) => {
     return (
       addtoCart && (
-        <button
-          onClick={addToCart}
-          className="btn btn-block btn-outline-success mt-2 mb-2"
-        >
-          Add to Cart
-        </button>
+        <div className="add-item">
+          <button onClick={addToCart} className="ADDbtn">
+            Add to Cart
+          </button>
+          {showMessage && (
+            <p className="added-to-cart-message show">Item added to the cart!</p>
+          )}
+        </div>
       )
     );
   };
 
   const showRemoveFromCart = (removeFromCart) => {
+    console.log("showRemoveFromCart function called"); // Check if this log appears
+  
     return (
       removeFromCart && (
-        <button
-          onClick={() => {
-            //TODO: handle this too
-            removeItemFromCart(product.id);
-            setReload(!reload);
-
-            console.log("Product removed from cart");
-          }}
-          className="btn btn-block btn-outline-danger mt-2 mb-2"
-        >
-          Remove from cart
-        </button>
+        <div className="remove-item">
+          <button
+            onClick={() => {
+              console.log("Remove button clicked"); // Check if this log appears
+              removeItemFromCart(product.id);
+              setReload(!reload);
+              setShowMessage(true);
+  
+              // After 3 seconds, reset showMessage to hide the message
+              setTimeout(() => {
+                setShowMessage(false);
+              }, 3000);
+  
+              console.log("Product removed from cart");
+            }}
+            className="RemoveBtn"
+          >
+            Remove from cart
+          </button>
+          {showMessage && (
+            <p className="removed-from-cart-message show">Item removed from the cart!</p>
+          )}
+        </div>
       )
     );
   };
+  
 
   return (
     <div className="card-item">
       <div className="card-header">{cartTitle}</div>
       <div className="card-body">
-        {getAredirect(redirect)}
-        <ImageHelper product={product}/>
-        <p className="card-description">
-          {cartDescription}
-        </p>
+        <ImageHelper product={product} />
+        <p className="card-description">{cartDescription}</p>
         <p className="card-price">$ {cartPrice}</p>
         <div className="card-price">
-          <div className="card-add">
-            {showAddToCart(addToCart)}
-          </div>
-          <div className="card-remove">
-            {showRemoveFromCart(removeFromCart)}
-          </div>
+          <div className="card-add">{showAddToCart(addToCart)}</div>
+          <div className="card-remove">{showRemoveFromCart(removeFromCart)}</div>
         </div>
       </div>
     </div>

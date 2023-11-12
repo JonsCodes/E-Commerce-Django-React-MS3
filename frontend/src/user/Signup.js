@@ -48,7 +48,7 @@ const Signup = () => {
   const successMessage = () => {
     return (
       <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+        <div className="success">
           <div
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
@@ -67,7 +67,7 @@ const Signup = () => {
   const errorMessage = () => {
     return (
       <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+        <div className="danger">
           <div
             className="alert alert-danger"
             style={{ display: error ? "" : "none" }}
@@ -81,11 +81,13 @@ const Signup = () => {
 
   const signUpForm = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className="SignUp-container">
+        <div className="sign-up-box">
+        <h2>Let's get you an account!!!</h2>
           <form>
-            <div className="form-group">
-              <label className="text-light">Name</label>
+            <div className="Name">
+              <label className="Label">Name</label>
+              <br/>
               <input
                 className="form-control"
                 value={name}
@@ -93,8 +95,9 @@ const Signup = () => {
                 type="text"
               />
             </div>
-            <div className="form-group">
-              <label className="text-light">Email</label>
+            <div className="Email">
+              <label className="Label">Email</label>
+              <br/>
               <input
                 className="form-control"
                 value={email}
@@ -102,8 +105,9 @@ const Signup = () => {
                 type="text"
               />
             </div>
-            <div className="form-group">
-              <label className="text-light">password</label>
+            <div className="password">
+              <label className="Label">password</label>
+              <br/>
               <input
                 className="form-control"
                 value={password}
@@ -113,7 +117,7 @@ const Signup = () => {
             </div>
             <button
               onClick={onSubmit}
-              className="btn btn-success btn-block"
+              className="success-btn"
             >
               Submit
             </button>
@@ -128,9 +132,6 @@ const Signup = () => {
       {successMessage()}
       {errorMessage()}
       {signUpForm()}
-      <p className="text-white text-center">
-        {JSON.stringify(values)}
-      </p>
     </Base>
   );
 };
