@@ -14,15 +14,13 @@ const Signin = () => {
     loading: false,
     didRedirect: false,
   });
-  const { name, email, password, error, success, loading, didRedirect } =
-    values;
+  const { email, password, error, success, loading, didRedirect } = values;
 
-  const handleChange = (name) =>
-    (event) => {
-      setValues({ ...values, error: false, [name]: event.target.value });
-    };
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, error: false, [name]: event.target.value });
+  };
 
-  const onSumit = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: false, loading: true });
 
@@ -30,7 +28,6 @@ const Signin = () => {
       .then((data) => {
         console.log("DATA", data);
         if (data.token) {
-          //let sessionToken = data.token;
           authenticate(data, () => {
             console.log("TOKEN ADDED");
             setValues({
@@ -42,6 +39,7 @@ const Signin = () => {
           setValues({
             ...values,
             loading: false,
+            error: data.error, // Set the error from the server
           });
         }
       })
@@ -57,7 +55,7 @@ const Signin = () => {
   const loadingMessage = () => {
     return (
       loading && (
-        <div className="alert alert-info">
+        <div className="alert-loading">
           <h2>Loading...</h2>
         </div>
       )
@@ -67,16 +65,13 @@ const Signin = () => {
   const successMessage = () => {
     return (
       <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+        <div className="alert-messages">
           <div
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
           >
-            New account created successfully. Please <Link
-              to="/signin"
-            >
-              login now.
-            </Link>
+            New account created successfully. Please{" "}
+            <Link to="/signin">login now.</Link>
           </div>
         </div>
       </div>
@@ -86,12 +81,12 @@ const Signin = () => {
   const errorMessage = () => {
     return (
       <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+        <div className="alert-message">
           <div
             className="alert alert-danger"
             style={{ display: error ? "" : "none" }}
           >
-            Check all fields again
+            {error}
           </div>
         </div>
       </div>
@@ -100,8 +95,11 @@ const Signin = () => {
 
   const signInForm = () => {
     return (
-      <div className="row">
-        <div className="col-md-6 offset-sm-3 text-left">
+      <div className="Signin-container">
+        <div className="sign-in-center">
+          {loadingMessage()}
+          {successMessage()}
+          {errorMessage()}
           <form>
             <div className="form-group">
               <label className="text-light">Email</label>
@@ -123,10 +121,7 @@ const Signin = () => {
                 type="password"
               />
             </div>
-            <button
-              onClick={onSumit}
-              className="btn btn-success btn-block"
-            >
+            <button onClick={onSubmit} className="success-btn">
               Submit
             </button>
           </form>
@@ -137,12 +132,9 @@ const Signin = () => {
 
   return (
     <Base title="Welcome to sign in page" description="Wise Guy Collections">
-      {loadingMessage()}
-
       {signInForm()}
-      <p className="text-center">
-        {JSON.stringify(values)}
-      </p>
+      {/* {loadingMessage()} */}
+      {successMessage()}
       {performRedirect()}
     </Base>
   );

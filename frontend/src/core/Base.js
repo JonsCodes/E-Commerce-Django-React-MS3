@@ -8,7 +8,7 @@ const Base = ({
   children,
 }) => {
   return (
-    <div className="bg-black text-white">
+    <div className="NavBar">
       <Menu />
       <div className="container-fluid">
         <div className={className}>{children}</div>

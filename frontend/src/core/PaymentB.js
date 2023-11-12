@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { cartEmpty } from "./helper/cartHelper";
 import { getmeToken, processPayment } from "./helper/paymentHelper";
 import { createOrder } from "./helper/orderHelper";
@@ -20,6 +20,8 @@ const PaymentB = ({
     instance: {},
   });
 
+  const history = useHistory();
+
   const userId = isAuthenticated && isAuthenticated().user.id;
   const token = isAuthenticated && isAuthenticated().token;
 
@@ -32,26 +34,28 @@ const PaymentB = ({
             error: info.error,
           });
           signout(() => {
-            return <Redirect to="/" />;
+            history.push("/");
           });
         } else {
           const clientToken = info.clientToken;
           setInfo({ clientToken });
         }
+      })
+      .catch((error) => {
+        console.error("Error in getToken:", error);
       });
   };
 
   useEffect(() => {
     getToken(userId, token);
-  }, []);
+  }, [userId, token]); // Include userId and token in the dependency array
 
   const getAmount = () => {
-    let amount = 0;
-    products.map((p) => {
-      amount = amount + parseInt(p.price);
-    });
-    return amount;
+    const total = products.reduce((acc, product) => acc + parseFloat(product.price), 0);
+    return total.toFixed(2); // Rounds to 2 decimal places
   };
+  
+
   const onPurchase = () => {
     setInfo({ loading: true });
     let nonce;
@@ -66,10 +70,10 @@ const PaymentB = ({
         .then((response) => {
           console.log("POINT-1", response);
           if (response.error) {
-            if (response.code == "1") {
+            if (response.code === "1") {
               console.log("PAYMENT Failed!");
               signout(() => {
-                return <Redirect to="/" />;
+                history.push("/");
               });
             }
           } else {
@@ -89,24 +93,24 @@ const PaymentB = ({
             createOrder(userId, token, orderData)
               .then((response) => {
                 if (response.error) {
-                  if (response.code == "1") {
+                  if (response.code === "1") {
                     console.log("Order Failed!");
                     signout(() => {
-                      return <Redirect to="/" />;
+                      history.push("/");
                     });
                   }
                 } else {
-                  if (response.success == true) {
+                  if (response.success === true) {
                     console.log("ORDER PLACED!!");
                   }
                 }
               })
               .catch((error) => {
                 setInfo({ loading: false, success: false });
-                console.log("Order FAILED", error);
+                console.error("Order FAILED", error);
               });
             cartEmpty(() => {
-              console.log("Did we got a crash?");
+              console.log("Did we get a crash?");
             });
 
             setReload(!reload);
@@ -114,7 +118,7 @@ const PaymentB = ({
         })
         .catch((error) => {
           setInfo({ loading: false, success: false });
-          console.log("PAYMENT FAILED", error);
+          console.error("PAYMENT FAILED", error);
         });
     });
   };
@@ -122,25 +126,22 @@ const PaymentB = ({
   const showbtnDropIn = () => {
     return (
       <div>
-        {info.clientToken !== null && products.length > 0
-          ? (
-            <div>
-              <DropIn
-                options={{ authorization: info.clientToken }}
-                onInstance={(instance) => (info.instance = instance)}
-              >
-              </DropIn>
-              <button
-                onClick={onPurchase}
-                className="btn btn-block btn-success"
-              >
-                Buy Now
-              </button>
-            </div>
-          )
-          : (
-            <h3>Please login first or add something in cart</h3>
-          )}
+        {info.clientToken !== null && products.length > 0 ? (
+          <div>
+            <DropIn
+              options={{ authorization: info.clientToken }}
+              onInstance={(instance) => (info.instance = instance)}
+            />
+            <button
+              onClick={onPurchase}
+              className="btn btn-block btn-success"
+            >
+              Buy Now
+            </button>
+          </div>
+        ) : (
+          <h3>Please login first or add something in the cart</h3>
+        )}
       </div>
     );
   };
@@ -154,3 +155,4 @@ const PaymentB = ({
 };
 
 export default PaymentB;
+

@@ -1,18 +1,9 @@
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-img{
-  max-width: 100%;
-}
-
-a{
-  text-decoration: none;
-  
-
 }
 
 body{
@@ -26,245 +17,277 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main{
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 20px;
-}
-
-.containers{
+/* .containers{
   max-width: 1000px;
   margin: auto;
-}
+} */
 
-.row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-ul{
-  height: 80px;
-  background-color: #000000;
-  list-style: none;
-}
-
-.footerP{
-  background-color: rgb(0, 0, 0);
-}
-
-.footer-col{
-  width: 25%;
-  padding: 0 15px;
-}
-
-.footer-col h4 {
-  font-size: 18px;
-  color: red;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-}
-
-.footer-col ul li a{
-  display: flex;
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  text-transform: capitalize;
-  text-decoration: none;
-  margin-bottom: 25px;
-}
-
-.footer-col ul li a:hover{
-  background-color: #000000;
-  padding-left: 20px;
-}
-
-.wiseGuyLogo{
-width: 400px;
-}
+/* ********************home page ********************/
 
 .Hitmanlogo{
-margin-left:50px;
+  width: 180px;
+  height:120px;
+  margin-top: 10px;
+margin-left:35px;
 display: flex;
 justify-content: center; 
-align-items: center; 
+align-items: center;
+}
+
+.homeContainer {
+  padding: 3vw;
+ text-align: center;
+  width: 50vw;
+  color: #333;
+  display: inline-block; /* Add this line to make it sit to the left */
+}
+
+.WGC-primary-img{
+  width: 100vw;
+  height: 100vh;
+}
+.PrimaryLogo{
+  width: 50vw;
+  height: 100vh;
 }
 
 .mainContainer{
 display: grid;
-gap: 85px;
 grid-template-columns: 1fr 1fr;
 max-width: 1100px;
 }
 
-.mainLeft{
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+.homeHeading{
+  font-size: 64px;
+  padding: 5vw;
+  }
+  
+  .homeInfo{
+  font-size: 25px;
+  line-height: 2;
+  color:  rgb(119, 118, 118);
+  }
+
+
+
+/* shop button on home page */
+.HSbtn{
+  margin-top: 50px;
+  /* display: flex;
+  justify-content: space-evenly; */
 }
 
-.button{
-margin-top: 20px;
+.homeBtn{
+  text-decoration: none;
+  background-color: black;
+  width: fit-content;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
 }
 
-.shopBtn{
-background-color: black;
-width: fit-content;
-padding: 15px ;
-color: white;
-border-radius: 10px;
-cursor: pointer;
-}
-
-a .shopBtn{
-text-decoration: none;
-color: white;
-}
-
-.shopBtn:hover  {
-background-color: white;
-border: 1px solid black;
-color: black;
+.homeBtn:hover {
+  background-color: white;
+border: 3.5px solid #69061c;
+color: #69061c;
 font-size: 15px;
 }
 
-.mainHeading{
-font-size: 64px;
-}
 
-.mainContent{
-font-size: 19px;
-line-height: 2;
-color:  rgb(119, 118, 118);
-}
-
-nav{
-  height: 120px;
-  display: flex;
-  align-items: center;
+/******************* NAV LINKS AND MENU *****************/
+.NavBar{
+  height: 140px;
   background-color: #000000;
-  color: white;
 }
-
-.navLeft{
-  display: flex;
-  align-items: center;
-}
-
-.navLinks{
-  display: flex;
-  margin-left: 64px;
-  gap: 40px;
+ul{
+  height: 130px;
+  background-color: #000000;
   list-style: none;
-}
-
-.right-nav-links{
-  margin-left: auto;
+  align-items: center;
 }
 
 ul li{
+  font-family: 'TeamFury';
   display: inline-block;
+  position: relative;
+  color: #ffffff;
 }
 
 ul li a{
   display: block;
-  padding: 20px 15px;
+  padding: 25px 0px 15px 0px; 
   color:white;
   text-decoration: none;
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-  margin-left:50px;
-}
-
-ul li a:hover{
-  margin-left:50px;
-  justify-content: center; 
-  align-items: center; 
-  font-weight: 600;
-  
-  }
-
-ul li ul.dropdown li{
-  display: block;
-}
-
-.dropdown{
- display: flex;
-}
-
-ul li ul.dropdown{
-  width: 200px;
-  background-color:#141414;
-  position: absolute;
-  display: none;
+  font-size: 35px;
+  font-weight: 800;
+  margin-left:40px;
 }
 
 
-
-ul li:hover ul.dropdown{
-  display: block;
-  margin-top: 320px;
-}
-
-.navLinks li{
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  user-select: none;
-  position: relative;
-}
-
-.navLinks li:hover{
-  color: rgba(119, 118, 118, 0);
-}
-
-.navContainer{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-inline: 3rem;
-  color: white;
-}
-
-.navLogo{
-  width: 50px;
-  height: 50px;
-}
-
-.registerBtn,.loginBtn{
+/* .registerBtn,.loginBtn{
   padding: 16px 32px;
   border-radius: 15px;
   color: rgb(119, 118, 118);
   cursor: pointer;
   background-color: transparent;
   font-size: 18px;
-}
+} */
 
-.registerBtn{
+/* .registerBtn{
   border: 1px solid rgb(119, 118, 118);
   color: white;
-}
+} */
 
-.registerBtn:hover{
+/* .registerBtn:hover{
   color: rgb(119, 118, 118);
-}
+} */
 
-.loginBtn{
+/* .loginBtn{
   border:  none;
   color: white;
 }
 
 .loginBtn:hover{
   color: rgb(119, 118, 118);
+} */
+
+/* *************************cart page************************* */
+
+.cart-item{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display three items per line */
+  gap: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
 }
 
-.mobileMenuBtn {
+
+/* ***********************SHOP PAGE*********************** */
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display three items per line */
+  gap: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.shop-title{
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 900;
+  font-family: 'TeamFury'
+}
+
+
+/******************************** CARD ITEM**************************/
+.card-item{
+  background-color: rgb(0, 0, 0);
+  width: 23vw;
+  height: 35vw;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  border: 1px solid #000000 0 0 10px 10px rgba(255, 3, 3, 0.742);
+  color: white;
+  margin-top: 3vh;
+}
+
+.card-header{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-family: 'TeamFury'
+}
+
+.card-image{
+  border: #69061c solid 3.5px ;
+  border-radius: 5%;
+}
+
+.cartpage-message{
+  margin-top: 15vh;
+  font-size: 50px;
+  font-family: 'TeamFury';
+  text-align: center;
+}
+
+.LoginBtn{
+  text-decoration: none;
+  background-color: black;
+  width: fit-content;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.LoginBtn:hover {
+  background-color: white;
+border: 3.5px solid #69061c;
+color: #69061c;
+}
+
+
+/* FONTS */
+
+
+@font-face {
+  font-family: 'Mobsters';
+  src: url('./core/Font/Mobsters.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FortDeath-2';
+  src: url('./core/Font/FortDeath-2.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RoyaleKingdom';
+  src: url('./core/Font/RoyaleKingdom.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TeamFury';
+  src: url('./core/Font/Team-Fury.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'thealiens';
+  src: url('./core/Font/thealiens.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+/***************************IMAGES AND LOGOS************************************  */
+
+  
+
+
+
+
+
+
+
+
+
+
+/* *******************************MOBILE STYLES********************************* */
+
+/* .mobileMenuBtn {
   display: none;
   width: 20px;
 }
@@ -326,51 +349,5 @@ ul li:hover ul.dropdown{
 
 code {
 font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-
-
-footer{
-  margin-top: auto;
-}
-
-
-.mainContainer {
-    /* You can apply other styles as needed */
-    /* For example, setting a fixed width for the block */
-    text-align: center;
-    width: 50vw;
-    /* Adding padding to create spacing around the block */
-    padding: 10%px;
-    /* Setting background color and text color */
-    background-color: #f0f0f0;
-    color: #333;
-    /* Centering the block horizontally with margin */
-    margin: 0 auto;
-}
-
-.WGC-primary-img{
-  width: 55vw;
-  height: 100vh;
-}
-
-.nav-link-HP{
-  background-color: black;
-  width: fit-content;
-  padding: 15px;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.nav-link-HP:hover {
-  background-color: white;
-border: 3.5px solid #69061c;
-color: #69061c;
-font-size: 15px;
-}
-
-
-
-/* .Right-nav-item{
 } */
+

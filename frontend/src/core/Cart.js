@@ -15,7 +15,7 @@ const Cart = () => {
 
   const loadAllProducts = (products) => {
     return (
-      <div>
+      <div className="cart-item">
         {products.map((product, index) => (
           <Card
             key={index}
@@ -40,19 +40,20 @@ const Cart = () => {
 
   return (
     <Base title="Cart page" description="Welcome to checkout">
-      <div className="row text-center">
-        <div className="col-6">
+      <div className="cartPage">
+        <div>
           {products.length > 0 ? (loadAllProducts(products)) : (
-            <h4>No products</h4>
+            <h4 className="cartpage-message" >No products</h4>
           )}
         </div>
-        <div className="col-6">
+        <div>
           {products.length > 0
             ? (
               <PaymentB products={products} setReload={setReload} />
             )
             : (
-              <h3>Please login or add something in cart</h3>
+              <h4 className="cartpage-message">Please login or add something in cart 
+              <br/><br/><a href="/signin" className="LoginBtn">Login</a></h4>
             )}
         </div>
       </div>

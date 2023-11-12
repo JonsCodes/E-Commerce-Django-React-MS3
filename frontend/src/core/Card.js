@@ -14,8 +14,8 @@ const Card = ({
 }) => {
   const [redirect, setRedirect] = useState(false);
 
-  const cartTitle = product ? product.name : "A photo from pexels";
-  const cartDescription = product ? product.description : "Default description";
+  const cartTitle = product ? product.name : "Product Name";
+  const cartDescription = product ? product.description : "Product Description";
   const cartPrice = product ? product.price : "Default";
 
   const addToCart = () => {
@@ -66,20 +66,20 @@ const Card = ({
   };
 
   return (
-    <div className="card text-white bg-dark border border-info ">
-      <div className="card-header lead">{cartTitle}</div>
+    <div className="card-item">
+      <div className="card-header">{cartTitle}</div>
       <div className="card-body">
         {getAredirect(redirect)}
-        <ImageHelper product={product} />
-        <p className="lead bg-success font-weight-normal text-wrap">
+        <ImageHelper product={product}/>
+        <p className="card-description">
           {cartDescription}
         </p>
-        <p className="btn btn-success rounded  btn-sm px-4">$ {cartPrice}</p>
-        <div className="row">
-          <div className="col-12">
+        <p className="card-price">$ {cartPrice}</p>
+        <div className="card-price">
+          <div className="card-add">
             {showAddToCart(addToCart)}
           </div>
-          <div className="col-12">
+          <div className="card-remove">
             {showRemoveFromCart(removeFromCart)}
           </div>
         </div>

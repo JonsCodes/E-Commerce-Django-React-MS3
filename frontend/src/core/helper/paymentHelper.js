@@ -10,7 +10,10 @@ export const getmeToken = (userId, token) => {
       }
       return response.json();
     })
-    .catch((err) => console.error("Error in getmeToken:", err));
+    .catch((err) => {
+      console.error("Error in getmeToken:", err);
+      throw err; // Re-throw the error to propagate it further if needed
+    });
 };
 
 export const processPayment = (userId, token, paymentInfo) => {
@@ -28,8 +31,10 @@ export const processPayment = (userId, token, paymentInfo) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      console.log("p-0", response);
       return response.json();
     })
-    .catch((err) => console.error("Error in processPayment:", err));
+    .catch((err) => {
+      console.error("Error in processPayment:", err);
+      throw err; // Re-throw the error to propagate it further if needed
+    });
 };

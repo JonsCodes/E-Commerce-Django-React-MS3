@@ -5,7 +5,7 @@ import { signout, isAuthenticated } from "../auth/helper";
 
 const currentTab = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: "#6b0821", textShadow: "0 0 5px white", };
+    return { color: "#6b0821", textShadow: "0 0 8px white", };
   } else {
     return { color: "#FFFFFF" };
   }
@@ -13,15 +13,13 @@ const currentTab = (history, path) => {
 
 const Menu = ({ history, path }) => {
   return (
-    <div>
+    <div className="NavBar">
       <ul>
         <li>
           <img 
           className="Hitmanlogo"
           src={require("../images/WGChitmanLogo.jpg")}
           alt="WGC hitman logo"
-          width={"70px"}
-          height={"70px"} 
           />
         </li>
         <li className="nav-item">
@@ -70,13 +68,14 @@ const Menu = ({ history, path }) => {
               Dashboard
             </Link>
           </li>
+          // **********************************************************************
         )}
         {!isAuthenticated() && (
           <Fragment>
-            <li className="nav-item">
+            <li className="Right-nav-item">
               <Link
                 style={currentTab(history, "/signup")}
-                className="Right-nav-link"
+                className="R-navLinks"
                 to="/signup"
               >
                 Signup
@@ -85,7 +84,7 @@ const Menu = ({ history, path }) => {
             <li className="Right-nav-item">
               <Link
                 style={currentTab(history, "/signin")}
-                className="nav-link"
+                className="R-navLinks"
                 to="/signin"
               >
                 Signin
@@ -95,14 +94,14 @@ const Menu = ({ history, path }) => {
         )}
 
         {isAuthenticated() && (
-          <li className="nav-item">
+          <li className="Right-nav-item">
             <span
               onClick={() => {
                 signout(() => {
                   history.push("/");
                 });
               }}
-              className="nav-link text-warning"
+              className="R-navLinks"
             >
               Signout
             </span>

@@ -7,14 +7,14 @@ export default function App() {
     <Base>
       <div>
         <main className="mainContainer">
-          <div className="intro">
-            <div className="mainHeading">
+          <div className="homeContainer">
+            <div className="homeHeading">
               Top-of-the-Line
               <hr />
               Combat Equipment
             </div>
 
-            <p className="mainContent">
+            <p className="homeInfo">
               Listen up, kid. You wanna make it in this business, you gotta be
               ready to roll with the big dogs. Gear up with the elite, and
               you'll dominate the ring. Wise Guy Collections: Rise to the top,
@@ -26,16 +26,17 @@ export default function App() {
 
             <h2>Capisci???</h2>
 
-            <div className="button">
+            <div className="HSbtn">
               <Link
                 to="/shop" // Update the path to "/shop"
-                className="nav-link-HP"
+                className="homeBtn"
                 // Add style={currentTab(history, "/shop")} if needed
               >
                 Shop Now
               </Link>
             </div>
           </div>
+
 
           <div className="WGC-primary-img">
           <img 
