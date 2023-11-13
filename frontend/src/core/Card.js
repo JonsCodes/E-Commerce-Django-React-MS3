@@ -3,6 +3,8 @@ import ImageHelper from "./helper/ImageHelper";
 import { addItemToCart, removeItemFromCart } from "./helper/cartHelper";
 import { isAuthenticated } from "../auth/helper";
 
+
+
 const Card = ({
   product,
   addtoCart = true,
@@ -38,7 +40,7 @@ const Card = ({
       addtoCart && (
         <div className="add-item">
           <button onClick={addToCart} className="ADDbtn">
-            Add to Cart
+            Add item
           </button>
           {showMessage && (
             <p className="added-to-cart-message show">Item added to the cart!</p>
@@ -70,7 +72,7 @@ const Card = ({
             }}
             className="RemoveBtn"
           >
-            Remove from cart
+            Remove
           </button>
           {showMessage && (
             <p className="removed-from-cart-message show">Item removed from the cart!</p>
@@ -88,7 +90,7 @@ const Card = ({
         <ImageHelper product={product} />
         <p className="card-description">{cartDescription}</p>
         <p className="card-price">$ {cartPrice}</p>
-        <div className="card-price">
+        <div className="card-buttons">
           <div className="card-add">{showAddToCart(addToCart)}</div>
           <div className="card-remove">{showRemoveFromCart(removeFromCart)}</div>
         </div>

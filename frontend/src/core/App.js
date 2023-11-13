@@ -24,7 +24,7 @@ export default function App() {
               Guy Collections...
             </p>
 
-            <h2>Capisci???</h2>
+            <h2 className="cap">Capisci???</h2>
 
             <div className="HSbtn">
               <Link
