@@ -33,6 +33,8 @@ const Card = ({
       console.log("Added to cart");
     } else {
       console.log("Login Please!");
+
+      {loginMessage && <div className="login-message">{loginMessage}</div>}
     }
   };
   const showAddToCart = (addToCart) => {
