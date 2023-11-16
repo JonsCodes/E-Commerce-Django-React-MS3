@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
  height: 50vh;
@@ -443,7 +447,7 @@ b{
 }
 
 .added-to-cart-message {
-  position: absolute;
+  position: fixed;
   bottom: 10px; /* Adjust the distance from the bottom as needed */
   right: 10px; /* Adjust the distance from the right as needed */
   background-color: #49f04e; /* Background color */
@@ -451,7 +455,7 @@ b{
   padding: 10px; /* Padding around the text */
   border-radius: 5px; /* Border radius for rounded corners */
   display: none; /* Initially hide the message */
-  z-index: -1500;
+  z-index: 1500;
 }
 
 
@@ -537,20 +541,29 @@ b{
 /******************************** CARD ITEM**************************/
 
 
-.card-item  {
+.card-item {
   background-color: rgb(0, 0, 0);
   max-height: 800px;
   height: 800px;
-  padding:3vw;
+  padding: 3vw;
   border-radius: 10px;
   border: 3px solid white;
   box-shadow: #69061c 4px 2px 6px 5px;
-  
-  margin: 15px; 
+  margin: 15px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-description {
+  display: table;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Arial";
+  max-height: 40%; /* Adjusted the max-height for better proportions */
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  margin: auto;
 }
 
 .card-header {
@@ -558,16 +571,12 @@ b{
   font-size: 15px;
   font-family: "TeamFury";
   padding: 3px;
-text-shadow:  
-  2px 4px 0 #69061c,  
-  2px -1px 0 #69061c,
-  -1px 1px 0 #69061c,
-2px 5px 0 #69061c;
+  text-shadow: 2px 4px 0 #69061c, 2px -1px 0 #69061c, -1px 1px 0 #69061c, 2px 5px 0 #69061c;
 }
 
 .card-image {
-  width: 100%; /* Ensure the image takes up the full width */
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  width: 100%;
+  max-width: 100%;
   border: #69061c solid 4px;
   border-radius: 5%;
   box-shadow: #f9f9f9 0 0 5px 6px;
@@ -578,31 +587,20 @@ text-shadow:
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   text-align: justify;
-
   height: 100%;
   width: 100%;
 }
 
 .card-body {
-  flex-grow: 130; /* Adjusted the value for better proportions */
-}
-
-.card-description{
-  display: table;
-  text-align: center;
-  font-size: 20px;
-  font-family: "arial";
-  /* width: 90%; */
-  max-height: 90%;
-  margin: auto;
+  flex-grow: 130;
 }
 
 .card-price {
   text-align: center;
   font-size: 20px;
-  font-family: "arial";
+  font-family: "Arial";
 }
 
 .card-buttons {
@@ -614,6 +612,27 @@ text-shadow:
 
 
 /* ************************SignUp Page and SignIn Page************************ */
+/* Add these styles to your existing CSS or modify as needed */
+.alert {
+  padding: 10px;
+  margin: 10px 0;
+  z-index: 9999;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  z-index: 9999;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+  z-index: 9999;
+}
+
+
+
 
 .Signin-container {
   background-color: #000000;
